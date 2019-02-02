@@ -53,7 +53,7 @@ func traverse(path string, v reflect.Value, ops ...Filter) {
 		}
 	case reflect.Ptr:
 		if v.IsNil() {
-			fmt.Printf("%s = nil", path)
+			fmt.Printf("%s = nil\n", path)
 		} else {
 			traverse(fmt.Sprintf("(*%s)", path), v.Elem(), ops...)
 		}

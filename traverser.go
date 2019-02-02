@@ -18,6 +18,10 @@ func IsZeroValue(v reflect.Value) bool {
 	return false
 }
 
+func NotZeroValue(v reflect.Value) bool {
+	return !IsZeroValue(v)
+}
+
 func Traverse(i interface{}, ops ...Filter) {
 	v := reflect.ValueOf(i)
 	name := v.Type().Name()

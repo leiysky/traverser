@@ -2,14 +2,14 @@ package traverser
 
 import "testing"
 
-type testStruct struct {
-	a string
-	b int
-	c map[string]string
-	d []int
+type TestStruct struct {
+	A string
+	B int
+	C map[string]string
+	D []int
 }
 
 func TestTraverse(t *testing.T) {
-	var a = &testStruct{"hello", 123, map[string]string{"hi": "how are you"}, []int{3, 4, 5, 6, 9}}
-	Traverse(a)
+	var a = &TestStruct{"hello", 0, map[string]string{"hi": "how are you"}, []int{3, 4, 5, 6, 9}}
+	Traverse(a, IsZeroValue)
 }
